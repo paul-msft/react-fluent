@@ -3,16 +3,22 @@
     "hostRequirements": {
       "cpus": 4
     },
-    "waitFor": "onCreateCommand",
-    "updateContentCommand": "npm run build",
-    "postCreateCommand": "",
-    "postAttachCommand": {
-      "server": "npm run start"
-    },
     "portsAttributes": {
       "3000": {
         "label": "Application"
       }
     },
-    "forwardPorts": [3000]
+    "forwardPorts": [
+        3000
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "github.vscode-github-actions",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    }
   }

@@ -12,17 +12,22 @@ export default function GuildPage() {
 
     const links = [
         {
-            label: 'API',
-            url: '/api',
+            label: 'Home',
+            url: '/'
         },
+        {
+            label: 'API',
+            url: '/api'
+        },
+        {
+            label: 'About',
+            url: '/about'
+        }
     ];
 
     return (
         <nav>
             <div className={styles.items}>
-            <Link className={styles.navItem} to="/">
-                 {/* <img className src="/eng.svg" />  */}
-            </Link>
             {renderLinks(links)}
             {/* <LogoutButton /> */}
             </div>

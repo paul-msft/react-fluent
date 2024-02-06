@@ -44,7 +44,7 @@ export function loginRequest() {
 
 export function tokenRequest() {
     return {
-        scopes: ["api://<GUID>/general"]
+        scopes: ["api://021daae2-b2b2-4427-b45e-35b804bdc868/default"]
     }
 }
 

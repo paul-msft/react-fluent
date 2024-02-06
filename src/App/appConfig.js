@@ -41,8 +41,6 @@ export default async function setLocalSettings() {
         }
     }
   }
-
-  
 }
 
 async function createClient() {
