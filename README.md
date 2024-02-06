@@ -16,5 +16,5 @@ Paul is trying to learn how to use React Vite, MSAL, MS Graph, and Fluent UI in 
     - The card demonstrates the `Card` container from Fluent UI.   
 ![API tab screenshot](public/api.png)   
 
-- From the **About** tab, you can see the... *ahem*... clearly accurate contact card using `Persona` component from Fluent UI   
+- From the **About** tab, you can see the... *ahem*... clearly accurate contact card using the `Persona` component from Fluent UI   
 ![About tab screenshot](public/about.png)
