@@ -40,13 +40,13 @@ export function loginRequest() {
     return {
         scopes: ["User.Read", localStorage.getItem('app-id-uri')]
     }
-}
+};
 
 export function tokenRequest() {
     return {
         scopes: ["api://021daae2-b2b2-4427-b45e-35b804bdc868/default"]
     }
-}
+};
 
 /**
  * Add here the scopes to request when obtaining an access token for MS Graph API. For more information, see:
@@ -54,5 +54,5 @@ export function tokenRequest() {
  */
 export const graphConfig = {
     graphMeEndpoint: "https://graph.microsoft.com/v1.0/me",
-    graphAvatarEndpoint: "https://graph.microsoft.com/v1.0/me/photo/$value",
+    graphAvatarEndpoint: "https://graph.microsoft.com/v1.0/me/photo/$value"
 };

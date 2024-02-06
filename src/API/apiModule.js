@@ -11,4 +11,4 @@ export const fetchData = async (location = "London") => {
       console.error('Error:', error);
       throw error;
     }
-  };
+};

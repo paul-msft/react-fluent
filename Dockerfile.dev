@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/mirror/docker/library/node:18-alpine
 WORKDIR /app
 COPY src/ ./src
-COPY public ./public
+# COPY public ./public
 COPY ./index.html ./index.html
 COPY ./favicon.ico ./favicon.ico
 COPY ./package.json .

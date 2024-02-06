@@ -10,14 +10,12 @@ export default function API() {
   const [inputValue, setInputValue] = useState(location);
 
   const handleInputChange = (event) => {
-    console.log("handleInputChange: ", event.target.value);
     setInputValue(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setLocation(inputValue);
-    console.log("handleSubmit: ", inputValue);
   };
 
   // Convert temp to F for Max
@@ -34,7 +32,7 @@ export default function API() {
         setError(error);
       });
   }, [location]);
-
+  
   return (
     <>
     <div className={styles.apiContainer}>
@@ -46,17 +44,20 @@ export default function API() {
           placeholder="Enter a location"
         />
         </Field>
+        <br />
         <Button type="submit">Search</Button>
       </form>
       {data && (
         <div className={styles.resultsContainer}>
           <Card>
-            <Title3>Current weather in {location}</Title3>
+            <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="Current weather icon" style={{width: '50px', height: '50px'}} />            <Title3>
+              Current weather in {data.name}
+            </Title3>
             <p>The weather in <b>{data.name}</b> is currently <b>{data.weather[0].description}</b> with a temperature of <b>{data.main.temp}°C</b> <b>({convertTempToF(data.main.temp)}°F)</b>.</p>
           </Card>
         </div>
       )}
-      {error && <Text>{error.message}</Text>}
+      {error && <p>{error.message}</p>}
     </div>
     </>
   );

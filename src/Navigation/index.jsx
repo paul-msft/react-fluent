@@ -1,4 +1,4 @@
-// import LogoutButton from "../LogoutButton";
+import LogoutButton from "../LogoutButton";
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 
@@ -29,7 +29,7 @@ export default function GuildPage() {
         <nav>
             <div className={styles.items}>
             {renderLinks(links)}
-            {/* <LogoutButton /> */}
+            <LogoutButton />
             </div>
         </nav>
     )

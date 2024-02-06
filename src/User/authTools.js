@@ -26,9 +26,11 @@ export async function getGraphApiAccessToken(msalInstance) {
   const account = msalInstance.getActiveAccount();
 
   // Login if no account is found
-  if (account == null)
+  if (account == null) {
     return msalInstance.loginRedirect(loginRequest());
+  }
 
+  // If an account is found, attempt to acquire an access token
   return await msalInstance.acquireTokenSilent(loginRequest())
     .then((res) => {
       return res.accessToken;

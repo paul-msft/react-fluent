@@ -27,10 +27,11 @@ export async function getUserData(msalInstance) {
 /**
  * Gets user avatar from MS Graph API
  */
-export async function getUserAvatar() {
+export async function getUserAvatar(msalInstance) {
     const headers = new Headers();
-    const token = await getGraphApiAccessToken();
+    const token = await getGraphApiAccessToken(msalInstance);
     const bearer = `Bearer ${token}`;
+
     headers.append("Authorization", bearer);
 
     const options = {
@@ -38,5 +39,10 @@ export async function getUserAvatar() {
         headers: headers
     };
 
-    return fetch(graphConfig.graphAvatarEndpoint, options)
+    try{
+        const response = await fetch(graphConfig.graphAvatarEndpoint, options);
+        return response;
+    } catch(error) {
+        console.error(error);
+    }
 }

@@ -15,6 +15,7 @@ UserProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+
 export function UserProvider({ children }) {
   const { accounts, inProgress, instance } = useMsal();
   const [userData, setUserData] = useState({});
