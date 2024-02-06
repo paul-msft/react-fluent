@@ -74,19 +74,10 @@ export default function Home() {
                         <>
                             <div className={styles.hero}>
                                 <div className={styles.contentContainer}>
-                                    <Display>Welcome, {userData.givenName}</Display>
-                                    <Title2>Resources for you and your team.</Title2>
-                                    <p>An <a target="_blank" rel="noopener noreferrer" href="https://">inner-source project</a> by the Guild, 
-                                    based on the <Link target="_blank" to="https://">Engineering Hub</Link>.</p>
+                                    <Display>Welcome, {userData.givenName}!</Display>
+                                    <Title2>This is Paul's Fluent UI React App.</Title2>
+                                    <p>Click on the <Link to="/api">API</Link> tab to test the API communication.</p>
                                 </div>
-                            </div>
-                            <div className={styles.contentContainer}>
-                                <img alt="Multiple formats into markdown, markdown into Github" className={styles.normalizeImage} src={normalizeImage} />
-                                <Title2>What is the Hub?</Title2>
-                                <p>The Hub represents EDOT's initiative to normalize our engineering standards, guidance, and resources across teams. 
-                                We are actively identifying and porting various artifacts into a common markdown format where they can be maintained in a collaborative, accessible platform (GitHub).</p>
-                                <p>
-                                The Hub allows teams and ICs to self-onboard, self-educate, and contribute to our best practices around designing, building, deploying, and scaling solutions.</p>
                             </div>
                         </>
                     }             
