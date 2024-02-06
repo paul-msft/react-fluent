@@ -10,7 +10,7 @@ Paul is trying to learn how to use React Vite, MSAL, MS Graph, and Fluent UI in 
     - Your profile picture shown beside the **Log Out** button is also obtained from MS Graph   
 ![Home page screenshot](public/home.png)   
 
-- In the **API** tab, you can enter a town a city name and hit **Enter** or press the **Submit** button. Doing so will update the card displaying the current weather and an appropriate weather icon.
+- In the **API** tab, you can enter a town or city name and hit **Enter** or press the **Submit** button. Doing so will update the card displaying the current weather and an appropriate weather icon.
     - The results come from querying an external weather API.
     - The icon will also be updated based on the weather response.
     - The card demonstrates the `Card` container from Fluent UI.   
