@@ -1,0 +1,18 @@
+nav {
+    padding-bottom: 0.5rem;
+    }
+    
+    nav .items {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    nav .navItem {
+        display:inline-block;
+        margin-right:0.5rem;
+        padding: 0.5rem
+        
+    }
+    nav .navItem img {
+        vertical-align: middle;
+    }

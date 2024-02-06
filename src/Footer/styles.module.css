@@ -1,0 +1,11 @@
+.footer {
+    width:100%;
+    
+}
+
+.footerContent {
+    margin:2rem auto;
+    padding: 1rem 0;
+    border-top:1px solid #EEE;
+    max-width: 1200px;
+}

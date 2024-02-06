@@ -1,0 +1,61 @@
+.contentContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:5rem 3rem ;
+}
+
+.contentContainer > span {
+    display: block;
+    margin-bottom:1rem;
+}
+
+.hero {
+    width: 100%;
+    height: 400px;
+    background: url('./hero.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.content {
+    width: 400px;
+    display: inline-block;
+    margin-top:1rem;
+}
+
+.form {
+    width:500px;
+    margin:3rem 0 1rem 0;
+    padding:2rem;
+    background:#111;
+    border-radius: 5px;
+    border: 1px solid #212121;
+    display: none;
+}
+
+.form p {
+    margin-top: 0;
+}
+
+.form input {
+    width:75%
+}
+
+.loginContainer {
+    max-width: 400px;
+    margin:4rem auto;
+}
+
+.iframe {
+    display: block;
+    width: 800px;
+    min-height: 500px;
+    max-height: 700px;
+    padding:1rem 0;
+}
+
+.normalizeImage {
+    float:left;
+    max-height: 350px;
+    margin:-2rem 0 0 -2rem;
+    padding:0 4rem 2rem 0;
+}

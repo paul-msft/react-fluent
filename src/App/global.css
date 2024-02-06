@@ -1,0 +1,15 @@
+/*
+html > body {
+    padding:0;
+    margin:0;
+    background: #010110;
+    overflow: hidden;
+    animation: animateBg 30s linear infinite;
+    background-image: linear-gradient(45deg,#b7b7d6,#ffffff,#b7b7d6);
+    background-size: 100% 1100%;
+  }
+  @keyframes animateBg {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 100%; }
+  }
+  */

@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  dev:
+    image: paul-reactfui/dev
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - 5173:5173
+    volumes:
+      - ./src:/app/src
+      # - ./public:/app/public
+      - ./index.html:/app/index.html
+      # - ./docs:/app/public/docs
+    environment:
+      - VITE_APP_CLIENT_ID=${VITE_APP_CLIENT_ID}
+      - VITE_APP_REDIRECT_URI=${VITE_APP_REDIRECT_URI}
+      - VITE_TENANT_ID=${VITE_TENANT_ID}
+      - VITE_APP_ID_URI=${VITE_APP_ID_URI}
+      - VITE_AZURE_CONFIG_URL=${VITE_AZURE_CONFIG_URL}
+      
+  release:
+    image: paul-reactfui/release
+    build:
+      context: .
+      dockerfile: ./Dockerfile 
+    ports:
+      - 80:80
+    environment:
+      - VITE_AZURE_CONFIG_URL=${VITE_AZURE_CONFIG_URL}

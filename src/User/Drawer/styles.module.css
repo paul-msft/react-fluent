@@ -1,0 +1,35 @@
+.card {
+    margin-bottom:2rem;
+}
+
+.steps {
+    list-style-type: none;
+    margin-top:3rem;
+}
+
+.steps li {
+    margin:0 1rem 0 0;
+}
+
+.progressHighlight {
+    margin-bottom: 2rem;
+}
+
+.journeyDetail {
+    list-style: none;
+    display: block;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.journeyDetail li {
+    margin: 0 0 0 -0.5rem;
+}
+
+.journeyDetail li .nextStep {
+    color: var(--colorNeutralForeground1);
+}
+
+.horizontalCardImage {
+    max-width: 150px;
+}
