@@ -9,14 +9,18 @@ export default function LogoutButton() {
   const isAuthenticated = useIsAuthenticated();
   const navigate = useNavigate();
   const { instance: msalInstance } = useMsal();
-  const [avatarUrl, setAvatarUrl] = useState(null);
+  const [avatarUrl, setAvatarUrl] = useState(localStorage.getItem('avatarUrl'));
 
   useEffect(() => {
     const fetchAvatar = async () => {
       const response = await getUserAvatar(msalInstance);
       const blob = await response.blob();
-      const avatarUrl = URL.createObjectURL(blob);
-      setAvatarUrl(avatarUrl);
+      const newAvatarUrl = URL.createObjectURL(blob);
+
+      if (newAvatarUrl !== avatarUrl) {
+        setAvatarUrl(newAvatarUrl);
+        localStorage.setItem('avatarUrl', newAvatarUrl);
+      }
     };
 
     fetchAvatar();
@@ -26,6 +30,7 @@ export default function LogoutButton() {
     event.preventDefault();
     if (isAuthenticated) {
       await msalInstance.logoutPopup();
+      localStorage.removeItem('avatarUrl');
       navigate("/");
     }
   }
@@ -41,4 +46,3 @@ export default function LogoutButton() {
     </Button>
   );
 }
-
